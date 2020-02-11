@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script src="functions.js"></script>
+    <style>
+        div.stooltip {
+            position: absolute;
+            text-align: center;
+            /*width: 100px;*/
+            padding: 2px;
+            font: 12px sans-serif;
+            background: #b0c4de;
+            border: 0px;
+            border-radius: 8px;
+            pointer-events: none;
+        }
+
+        .buttons{
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <div class="buttons">
+        <button id = "confirmButton">确诊病例</button>
+        <button id = "curedButton">治愈病例</button>
+        <button id = 'deadButton'>死亡病例</button>
+        <button id = 'return'>全国</button>
+    </div>
+
+    <div id="sankey">
+    </div>
+    <script src="sankey.js"></script>
+
+</body>
+</html>
