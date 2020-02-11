@@ -73,8 +73,11 @@ d3.json("data/allProvince_city.json",function(d){
 
 
 function drawSankey(data,type) {
+    d3.selectAll(".button").style("background","white")
+    d3.select("#"+type+"Button").style("background","grey")
 
-    d3.select("#confirmButton").on("click",()=>drawSankey(data,'confirmed'));
+
+    d3.select("#confirmedButton").on("click",()=>drawSankey(data,'confirmed'));
     d3.select("#curedButton").on("click",()=>drawSankey(data,'cured'));
     d3.select("#deadButton").on("click",()=>drawSankey(data,'dead'));
 
